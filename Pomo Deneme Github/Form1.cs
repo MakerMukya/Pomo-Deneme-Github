@@ -47,10 +47,10 @@ namespace Pomo_Deneme_Github
              * 3    Bu yüzden hesaplamayý burada yapacaðým
              */
 
-            DateTime dtStart = Convert.ToDateTime(basildiStart);
-            DateTime dtEnd = DateTime.Now;
-            TimeSpan tsSonuc = dtEnd.Subtract(dtStart);
-            lblTime.Text = tsSonuc.ToString();
+            //DateTime dtStart = Convert.ToDateTime(basildiStart);
+            //DateTime dtEnd = DateTime.Now;
+            //TimeSpan tsSonuc = dtEnd.Subtract(dtStart);
+            //lblTime.Text = tsSonuc.ToString();
 
         }
     }
