@@ -5,6 +5,7 @@ namespace Pomo_Deneme_Github
         TimeStartAbD timeDa = new TimeStartAbD();
         string timeFormat = "HH:mm:ss";
         string basildiStart;
+        int sayac;
         public Form1()
         {
             InitializeComponent();
@@ -12,18 +13,20 @@ namespace Pomo_Deneme_Github
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            timerLbl.Interval = 1000;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
             timeDa.StartTime = DateTime.Now.ToString(timeFormat);
             basildiStart = timeDa.StartTime;
+            timerLbl.Start();
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
             timeDa.EndTime = DateTime.Now.ToString(timeFormat);
+            timerLbl.Stop();
         }
 
         private void btnHesapla_Click(object sender, EventArgs e)
@@ -34,10 +37,9 @@ namespace Pomo_Deneme_Github
 
         private void timerLbl_Tick(object sender, EventArgs e)
         {
-            /*
+            
             timeDa.WorkTime();
             lblTime.Text = timeDa.GecenTime();
-            */
 
             /*
              * 1    lblTime.Text = timeDa.GecenTime();
