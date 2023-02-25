@@ -14,5 +14,6 @@ namespace Pomo_Deneme_Github
         string Hesapla();
         void WorkTime();
         string GecenTime();
+        void CsvWrite();
     }
 }

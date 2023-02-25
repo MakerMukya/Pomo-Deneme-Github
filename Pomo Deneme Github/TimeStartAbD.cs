@@ -1,8 +1,13 @@
-﻿using System;
+﻿using CsvHelper.Configuration;
+using CsvHelper;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CsvHelper;
+using CsvHelper.Configuration.Attributes;
 
 namespace Pomo_Deneme_Github
 {
@@ -52,8 +57,25 @@ namespace Pomo_Deneme_Github
             DateTime basEnd = DateTime.Now;
             TimeSpan basSonuc = basEnd.Subtract(basStart);
             _workTime = basSonuc.ToString();
-
-
+            
+        }
+        public void CsvWrite()
+        {
+            var myFile = new List<CsvFile>()
+            {
+                new CsvFile { BaslangicDate = Convert.ToDateTime(_timeStart) , BitisDate= Convert.ToDateTime(_timeEnd)/*,Zaman = _hesaplandi */}
+            };
+            var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                // Don't write the header again.
+                HasHeaderRecord = false,
+            };
+            using (var stream = File.Open("filePersonsWithDoB.csv", FileMode.Append))
+            using (var writer = new StreamWriter(stream))
+            using (var csv = new CsvWriter(writer, config))
+            {
+                csv.WriteRecords(myFile);
+            }
         }
     }
 }

@@ -27,6 +27,7 @@ namespace Pomo_Deneme_Github
         {
             timeDa.EndTime = DateTime.Now.ToString(timeFormat);
             timerLbl.Stop();
+            timeDa.CsvWrite();
         }
 
         private void btnHesapla_Click(object sender, EventArgs e)
