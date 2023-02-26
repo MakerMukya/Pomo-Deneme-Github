@@ -15,5 +15,6 @@ namespace Pomo_Deneme_Github
         void WorkTime();
         string GecenTime();
         void CsvWrite();
+        string Task { get; set; }
     }
 }

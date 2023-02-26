@@ -54,5 +54,17 @@ namespace Pomo_Deneme_Github
             //lblTime.Text = tsSonuc.ToString();
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            timeDa.Task = comboBox1.Text;
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(txtTask.Text);
+            comboBox1.Items.AddRange(new object[] {txtTask.Text});
+        }
     }
 }

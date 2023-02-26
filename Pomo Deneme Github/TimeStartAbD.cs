@@ -19,6 +19,7 @@ namespace Pomo_Deneme_Github
         private string _hesaplandi;
         private string _gecen;
         private string _workTime;
+        private string _task;
 
         public string StartTime 
         {
@@ -63,7 +64,7 @@ namespace Pomo_Deneme_Github
         {
             var myFile = new List<CsvFile>()
             {
-                new CsvFile { BaslangicDate = Convert.ToDateTime(_timeStart) , BitisDate= Convert.ToDateTime(_timeEnd)/*,Zaman = _hesaplandi */}
+                new CsvFile { BaslangicDate = Convert.ToDateTime(_timeStart) , BitisDate= Convert.ToDateTime(_timeEnd)/*,Zaman = _hesaplandi */, TaskSelect = _task}
             };
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -77,5 +78,12 @@ namespace Pomo_Deneme_Github
                 csv.WriteRecords(myFile);
             }
         }
+        public string Task 
+        { 
+            get { return _task; } 
+            set { _task = value; }
+        }
+
+
     }
 }
