@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtTask = new System.Windows.Forms.TextBox();
+            this.btnNotion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -127,6 +128,17 @@
             this.txtTask.Size = new System.Drawing.Size(165, 23);
             this.txtTask.TabIndex = 7;
             // 
+            // btnNotion
+            // 
+            this.btnNotion.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnNotion.Location = new System.Drawing.Point(412, 616);
+            this.btnNotion.Name = "btnNotion";
+            this.btnNotion.Size = new System.Drawing.Size(332, 65);
+            this.btnNotion.TabIndex = 8;
+            this.btnNotion.Text = "Notiona Aktar";
+            this.btnNotion.UseVisualStyleBackColor = false;
+            this.btnNotion.Click += new System.EventHandler(this.btnNotion_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -134,6 +146,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1176, 718);
+            this.Controls.Add(this.btnNotion);
             this.Controls.Add(this.txtTask);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -160,5 +173,6 @@
         private Label label1;
         private Button button1;
         private TextBox txtTask;
+        private Button btnNotion;
     }
 }
