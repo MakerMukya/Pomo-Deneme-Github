@@ -68,32 +68,28 @@ namespace Pomo_Deneme_Github
             //MessageBox.Show(txtTask.Text);
             comboBox1.Items.AddRange(new object[] {txtTask.Text});
         }
-        private void run_cmd()
-        {
-
-            string fileName = @"C:\Users\sebim\Desktop\Python_notion.py";
-
-            Process p = new Process();
-            p.StartInfo = new ProcessStartInfo(@"C:\Users\sebim\AppData\Local\Programs\Python\Python311\python.exe", fileName)
-            {
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-                CreateNoWindow = false
-            };
-            p.Start();
-
-            string output = p.StandardOutput.ReadToEnd();
-            p.WaitForExit();
-            label1.Text = output;
-            Console.WriteLine(output);
-
-            Console.ReadLine();
-
-        }
+       
 
         private void btnNotion_Click(object sender, EventArgs e)
         {
-            run_cmd();
+            timeDa.run_cmd();
+        }
+
+        private void btnPauseCont_Click(object sender, EventArgs e)
+        {
+            if (btnPauseCont.Text == "Pause")
+            {
+                timeDa.PauseTime = DateTime.Now.ToString(timeFormat);
+                btnPauseCont.Text = "Continue";
+                timerLbl.Stop();
+            }
+            else
+            {
+                timeDa.ContinueTime = DateTime.Now.ToString(timeFormat);
+                btnPauseCont.Text = "Pause";
+                timerLbl.Start();
+
+            }
         }
     }
 }

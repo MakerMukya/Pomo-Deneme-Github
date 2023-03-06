@@ -16,6 +16,12 @@ namespace Pomo_Deneme_Github
         string GecenTime();
         void CsvWrite();
         string Task { get; set; }
+        string PauseTime { get; set; }
+        string ContinueTime { get; set; }
+        string BreakTime { get; set; }
+        void Break();
+
+
 
     }
 }

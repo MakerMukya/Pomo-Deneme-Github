@@ -39,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtTask = new System.Windows.Forms.TextBox();
             this.btnNotion = new System.Windows.Forms.Button();
+            this.btnPauseCont = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -53,7 +54,7 @@
             // btnHesapla
             // 
             this.btnHesapla.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHesapla.Location = new System.Drawing.Point(911, 437);
+            this.btnHesapla.Location = new System.Drawing.Point(315, 268);
             this.btnHesapla.Name = "btnHesapla";
             this.btnHesapla.Size = new System.Drawing.Size(229, 88);
             this.btnHesapla.TabIndex = 3;
@@ -65,9 +66,9 @@
             // 
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTime.Location = new System.Drawing.Point(475, 358);
+            this.lblTime.Location = new System.Drawing.Point(315, 139);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(229, 91);
+            this.lblTime.Size = new System.Drawing.Size(229, 88);
             this.lblTime.TabIndex = 2;
             this.lblTime.Text = "Geçen Zaman";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,7 +76,7 @@
             // btnStop
             // 
             this.btnStop.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStop.Location = new System.Drawing.Point(911, 293);
+            this.btnStop.Location = new System.Drawing.Point(625, 151);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(229, 88);
             this.btnStop.TabIndex = 1;
@@ -86,7 +87,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStart.Location = new System.Drawing.Point(911, 151);
+            this.btnStart.Location = new System.Drawing.Point(12, 139);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(229, 88);
             this.btnStart.TabIndex = 0;
@@ -139,6 +140,17 @@
             this.btnNotion.UseVisualStyleBackColor = false;
             this.btnNotion.Click += new System.EventHandler(this.btnNotion_Click);
             // 
+            // btnPauseCont
+            // 
+            this.btnPauseCont.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPauseCont.Location = new System.Drawing.Point(315, 362);
+            this.btnPauseCont.Name = "btnPauseCont";
+            this.btnPauseCont.Size = new System.Drawing.Size(229, 88);
+            this.btnPauseCont.TabIndex = 9;
+            this.btnPauseCont.Text = " Pause";
+            this.btnPauseCont.UseVisualStyleBackColor = true;
+            this.btnPauseCont.Click += new System.EventHandler(this.btnPauseCont_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -146,6 +158,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1176, 718);
+            this.Controls.Add(this.btnPauseCont);
             this.Controls.Add(this.btnNotion);
             this.Controls.Add(this.txtTask);
             this.Controls.Add(this.button1);
@@ -174,5 +187,6 @@
         private Button button1;
         private TextBox txtTask;
         private Button btnNotion;
+        private Button btnPauseCont;
     }
 }

@@ -15,6 +15,6 @@ namespace Pomo_Deneme_Github
         [Format("AZ MMM dd, yyyy HH:mm:ss")]
         public DateTime BitisDate { get; set; }
         public string  TaskSelect { get; set; }
-        // public string Zaman { get; set; }
+        //public string Zaman { get; set; }
     }
 }
